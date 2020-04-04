@@ -3,7 +3,7 @@
 
 This analysis pretends to explain the student´s behavior while using a VLE. Learning digitally has been proven of tremendous help in keeping up with the necessary skills in the 21st century. It allows education to be more accessible, personalized and immersive. This project pretends to explore if applying Data Analysis to the student´s digital footprint allows us to better understand their behavior and act sooner to make better decisions that help them reach goals.  
 
-Thanks to the data publicly provided by Open University cite: Kuzilek J., Hlosta M., Zdrahal Z. Open University Learning Analytics dataset Sci. Data 4:170171 doi: 10.1038/sdata.2017.171 (2017). you can access the Data Dictionary [here.](https://analyse.kmi.open.ac.uk/open_dataset#description)
+Many thanks to the data publicly provided by Open University cite: Kuzilek J., Hlosta M., Zdrahal Z. Open University Learning Analytics dataset Sci. Data 4:170171 doi: 10.1038/sdata.2017.171 (2017). You can access the Data Dictionary [here.](https://analyse.kmi.open.ac.uk/open_dataset#description)
 
 
 Bearing that in mind, your job is to: 
