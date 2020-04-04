@@ -1,6 +1,11 @@
-# Data Project README file
+# EDA on Student´s Activity in a Virtual Learning Environment.
+### ¿What are you doing online?
 
-The README file describes the essence of the project playing the most important role. Most visitors will simply scroll down about twice on the README and leave if they are not interested. So, the README file should provide the reason **why** to checkout your project!!!). 
+This analysis pretends to explain the student´s behavior while using a VLE. Learning digitally has been proven of tremendous help in keeping up with the necessary skills in the 21st century. It allows education to be more accessible, personalized and immersive. This project pretends to explore if applying Data Analysis to the student´s digital footprint allows us to better understand their behavior and act sooner to make better decisions that help them reach goals.  
+
+Many thanks to the data publicly provided by Open University cite: Kuzilek J., Hlosta M., Zdrahal Z. Open University Learning Analytics dataset Sci. Data 4:170171 doi: 10.1038/sdata.2017.171 (2017). You can access the Data Dictionary [here.](https://analyse.kmi.open.ac.uk/open_dataset#description)
+
+
 Bearing that in mind, your job is to: 
 - Tell them what it is (with context).
 - Show them what it looks like in action.
