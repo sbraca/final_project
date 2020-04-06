@@ -1,5 +1,5 @@
 # EDA on Student´s Activity in a Virtual Learning Environment.
-### ¿What are you doing online?
+### What are you doing online?
 
 This analysis pretends to explain the student´s behavior while using a VLE. Learning digitally has been proven of tremendous help in keeping up with the necessary skills in the 21st century. It allows education to be more accessible, personalized and immersive. This project pretends to explore if applying Data Analysis to the student´s digital footprint allows us to better understand their behavior and act sooner to make better decisions that help them reach goals.  
 
