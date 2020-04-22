@@ -221,7 +221,7 @@
       </column>
       <column caption='Age Band' datatype='string' name='[age_band]' role='dimension' type='nominal' />
       <column caption='Clicks Per Asmt' datatype='real' name='[clicks_per_asmt]' role='measure' type='quantitative' />
-      <column caption='Cluster' datatype='integer' name='[cluster]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Cluster' datatype='integer' name='[cluster]' role='dimension' type='ordinal' />
       <column caption='Code Module' datatype='string' name='[code_module]' role='dimension' type='nominal' />
       <column caption='Final Result' datatype='string' name='[final_result]' role='dimension' type='nominal' />
       <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
@@ -232,7 +232,7 @@
       <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
       <column caption='Studied Credits' datatype='integer' name='[studied_credits]' role='measure' type='quantitative' />
       <column caption='Total Clicks' datatype='integer' name='[total_clicks]' role='measure' type='quantitative' />
-      <layout dim-ordering='alphabetic' dim-percentage='0.501062' measure-ordering='alphabetic' measure-percentage='0.498938' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.502451' measure-ordering='alphabetic' measure-percentage='0.497549' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
@@ -262,7 +262,19 @@
     <worksheet name='Sheet 2'>
       <table>
         <view>
-          <datasources />
+          <datasources>
+            <datasource caption='0.41_five_clusters' name='federated.1ovxavb0w7r6e119gt6a20uvmr0q' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ovxavb0w7r6e119gt6a20uvmr0q'>
+            <column-instance column='[mean_score]' derivation='Avg' name='[avg:mean_score:qk]' pivot='key' type='quantitative' />
+            <column caption='Clicks Per Asmt' datatype='real' name='[clicks_per_asmt]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Cluster' datatype='integer' name='[cluster]' role='dimension' type='ordinal' />
+            <column caption='Final Result' datatype='string' name='[final_result]' role='dimension' type='nominal' />
+            <column caption='Mean Score' datatype='real' name='[mean_score]' role='measure' type='quantitative' />
+            <column-instance column='[cluster]' derivation='None' name='[none:cluster:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[final_result]' derivation='None' name='[none:final_result:nk]' pivot='key' type='nominal' />
+            <column-instance column='[clicks_per_asmt]' derivation='Sum' name='[sum:clicks_per_asmt:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
           <aggregation value='true' />
         </view>
         <style />
@@ -272,16 +284,26 @@
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ovxavb0w7r6e119gt6a20uvmr0q].[none:final_result:nk]' />
+              <text column='[federated.1ovxavb0w7r6e119gt6a20uvmr0q].[avg:mean_score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
           </pane>
         </panes>
-        <rows />
-        <cols />
+        <rows>[federated.1ovxavb0w7r6e119gt6a20uvmr0q].[sum:clicks_per_asmt:qk]</rows>
+        <cols>[federated.1ovxavb0w7r6e119gt6a20uvmr0q].[none:cluster:ok]</cols>
       </table>
       <simple-id uuid='{0A260B2F-8EB3-457C-A9B6-B1B658854BA2}' />
     </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' name='Sheet 1'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -304,7 +326,7 @@
       </cards>
       <simple-id uuid='{F47EF809-563A-4003-AFA2-451A26613623}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 2'>
+    <window class='worksheet' name='Sheet 2'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -314,14 +336,19 @@
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='31'>
+          <strip size='2147483647'>
             <card type='columns' />
           </strip>
-          <strip size='31'>
+          <strip size='2147483647'>
             <card type='rows' />
           </strip>
           <strip size='31'>
             <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ovxavb0w7r6e119gt6a20uvmr0q].[none:final_result:nk]' type='color' />
           </strip>
         </edge>
       </cards>

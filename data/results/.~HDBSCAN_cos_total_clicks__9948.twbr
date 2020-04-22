@@ -221,7 +221,7 @@
       </column>
       <column caption='Age Band' datatype='string' name='[age_band]' role='dimension' type='nominal' />
       <column caption='Clicks Per Asmt' datatype='real' name='[clicks_per_asmt]' role='measure' type='quantitative' />
-      <column caption='Cluster' datatype='integer' name='[cluster]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Cluster' datatype='integer' name='[cluster]' role='dimension' type='ordinal' />
       <column caption='Code Module' datatype='string' name='[code_module]' role='dimension' type='nominal' />
       <column caption='Final Result' datatype='string' name='[final_result]' role='dimension' type='nominal' />
       <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
@@ -281,7 +281,7 @@
     </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' name='Sheet 1'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -304,7 +304,7 @@
       </cards>
       <simple-id uuid='{24D5BB72-704E-491B-83BF-A6A853FCFDC6}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 2'>
+    <window class='worksheet' name='Sheet 2'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -314,10 +314,10 @@
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='31'>
+          <strip size='2147483647'>
             <card type='columns' />
           </strip>
-          <strip size='31'>
+          <strip size='2147483647'>
             <card type='rows' />
           </strip>
           <strip size='31'>

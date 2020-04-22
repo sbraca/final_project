@@ -3,6 +3,8 @@
 <!-- build 20194.20.0119.2058                               -->
 <workbook source-build='2019.4.2 (20194.20.0119.2058)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
     <SheetIdentifierTracking ignorable='true' predowngraded='true' />
     <WindowsPersistSimpleIdentifiers />
   </document-format-change-manifest>
@@ -218,9 +220,9 @@
       </column>
       <column caption='Age Band' datatype='string' name='[age_band]' role='dimension' type='nominal' />
       <column caption='Clicks Per Asmt' datatype='real' name='[clicks_per_asmt]' role='measure' type='quantitative' />
-      <column caption='Cluster Result' datatype='integer' name='[cluster_result]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Cluster Result' datatype='integer' name='[cluster_result]' role='dimension' type='ordinal' />
       <column caption='Code Module' datatype='string' name='[code_module]' role='dimension' type='nominal' />
-      <column caption='Final Result' datatype='integer' name='[final_result]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Final Result' datatype='integer' name='[final_result]' role='dimension' type='ordinal' />
       <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
       <column caption='Highest Education' datatype='string' name='[highest_education]' role='dimension' type='nominal' />
       <column caption='Id Student' datatype='integer' name='[id_student]' role='dimension' type='ordinal' />
@@ -239,7 +241,22 @@
     <worksheet name='Sheet 1'>
       <table>
         <view>
-          <datasources />
+          <datasources>
+            <datasource caption='DBSCANclusters_index_df' name='federated.15bw1ol0w8m3rg1c0kdtv1llzqdp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15bw1ol0w8m3rg1c0kdtv1llzqdp'>
+            <column-instance column='[mean_score]' derivation='Avg' name='[avg:mean_score:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Cluster Result' datatype='integer' name='[cluster_result]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Final Result' datatype='integer' name='[final_result]' role='dimension' type='ordinal' />
+            <column caption='Mean Score' datatype='real' name='[mean_score]' role='measure' type='quantitative' />
+            <column-instance column='[cluster_result]' derivation='None' name='[none:cluster_result:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[final_result]' derivation='None' name='[none:final_result:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[total_clicks]' derivation='Sum' name='[sum:total_clicks:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Clicks' datatype='integer' name='[total_clicks]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:cluster_result:ok]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[sum:total_clicks:qk]' shelf='columns' />
+          </shelf-sorts>
           <aggregation value='true' />
         </view>
         <style />
@@ -249,17 +266,42 @@
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:final_result:ok]' />
+              <text column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:mean_score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
           </pane>
         </panes>
-        <rows />
-        <cols />
+        <rows>[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[sum:total_clicks:qk]</rows>
+        <cols>[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:cluster_result:ok]</cols>
       </table>
       <simple-id uuid='{24B16B86-57CB-4603-AA1D-7B5284F1EC93}' />
     </worksheet>
     <worksheet name='Sheet 2'>
       <table>
         <view>
-          <datasources />
+          <datasources>
+            <datasource caption='DBSCANclusters_index_df' name='federated.15bw1ol0w8m3rg1c0kdtv1llzqdp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15bw1ol0w8m3rg1c0kdtv1llzqdp'>
+            <column caption='Clicks Per Asmt' datatype='real' name='[clicks_per_asmt]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Cluster Result' datatype='integer' name='[cluster_result]' role='dimension' type='ordinal' />
+            <column-instance column='[id_student]' derivation='Count' name='[cnt:id_student:qk]' pivot='key' type='quantitative' />
+            <column caption='Id Student' datatype='integer' name='[id_student]' role='dimension' type='ordinal' />
+            <column caption='Mean Score' datatype='real' name='[mean_score]' role='measure' type='quantitative' />
+            <column-instance column='[cluster_result]' derivation='None' name='[none:cluster_result:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[clicks_per_asmt]' derivation='Sum' name='[sum:clicks_per_asmt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mean_score]' derivation='Sum' name='[sum:mean_score:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:cluster_result:ok]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[cnt:id_student:qk]' shelf='columns' />
+          </shelf-sorts>
           <aggregation value='true' />
         </view>
         <style />
@@ -269,16 +311,20 @@
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[sum:clicks_per_asmt:qk]' />
+              <lod column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[sum:mean_score:qk]' />
+            </encodings>
           </pane>
         </panes>
-        <rows />
-        <cols />
+        <rows>[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[cnt:id_student:qk]</rows>
+        <cols>[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:cluster_result:ok]</cols>
       </table>
       <simple-id uuid='{34BD4F54-7907-41A6-9A4E-12288BB24BC2}' />
     </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' name='Sheet 1'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -298,10 +344,15 @@
             <card type='title' />
           </strip>
         </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:final_result:ok]' type='color' />
+          </strip>
+        </edge>
       </cards>
       <simple-id uuid='{85B77A13-9B07-4FEA-9525-EF9CFFC23D2B}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sheet 2'>
+    <window class='worksheet' name='Sheet 2'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -311,10 +362,10 @@
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='31'>
+          <strip size='2147483647'>
             <card type='columns' />
           </strip>
-          <strip size='31'>
+          <strip size='2147483647'>
             <card type='rows' />
           </strip>
           <strip size='31'>
