@@ -1,0 +1,980 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.20.0119.2058                               -->
+<workbook source-build='2019.4.2 (20194.20.0119.2058)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='DBSCANclusters_index_df (2)' inline='true' name='federated.00zkt0719p115g124zmoi1hf5c38' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='DBSCANclusters_index_df' name='textscan.1qa55an1flvfqu119qgt20z33j9q'>
+            <connection class='textscan' directory='/Users/stefaniabraca/Desktop/final_project/data/results' filename='DBSCANclusters_index_df.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1qa55an1flvfqu119qgt20z33j9q' name='DBSCANclusters_index_df.csv' table='[DBSCANclusters_index_df#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='id_student' ordinal='0' />
+            <column datatype='string' name='age_band' ordinal='1' />
+            <column datatype='string' name='gender' ordinal='2' />
+            <column datatype='string' name='highest_education' ordinal='3' />
+            <column datatype='integer' name='n_assignments' ordinal='4' />
+            <column datatype='real' name='mean_score' ordinal='5' />
+            <column datatype='integer' name='final_result' ordinal='6' />
+            <column datatype='integer' name='total_clicks' ordinal='7' />
+            <column datatype='integer' name='studied_credits' ordinal='8' />
+            <column datatype='string' name='region' ordinal='9' />
+            <column datatype='string' name='code_module' ordinal='10' />
+            <column datatype='real' name='clicks_per_asmt' ordinal='11' />
+            <column datatype='integer' name='cluster_result' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_student</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id_student]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>id_student</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age_band</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[age_band]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>age_band</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>highest_education</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[highest_education]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>highest_education</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>n_assignments</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[n_assignments]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>n_assignments</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mean_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mean_score]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>mean_score</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>final_result</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[final_result]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>final_result</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_clicks</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_clicks]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>total_clicks</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>studied_credits</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[studied_credits]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>studied_credits</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>code_module</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[code_module]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>code_module</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clicks_per_asmt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clicks_per_asmt]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>clicks_per_asmt</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cluster_result</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cluster_result]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>cluster_result</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Age Band' datatype='string' name='[age_band]' role='dimension' type='nominal' />
+      <column caption='Clicks Per Asmt' datatype='real' name='[clicks_per_asmt]' role='measure' type='quantitative' />
+      <column aggregation='Sum' datatype='integer' name='[cluster_result]' role='dimension' type='ordinal' />
+      <column caption='Code Module' datatype='string' name='[code_module]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Final Result' datatype='integer' name='[final_result]' role='dimension' type='ordinal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Highest Education' datatype='string' name='[highest_education]' role='dimension' type='nominal' />
+      <column caption='Id Student' datatype='integer' name='[id_student]' role='measure' type='quantitative' />
+      <column caption='Mean Score' datatype='real' name='[mean_score]' role='measure' type='quantitative' />
+      <column caption='N Assignments' datatype='integer' name='[n_assignments]' role='measure' type='quantitative' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Studied Credits' datatype='integer' name='[studied_credits]' role='measure' type='quantitative' />
+      <column caption='Total Clicks' datatype='integer' name='[total_clicks]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.501085' measure-ordering='alphabetic' measure-percentage='0.498915' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='DBSCANclusters_index_df' inline='true' name='federated.15bw1ol0w8m3rg1c0kdtv1llzqdp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='DBSCANclusters_index_df' name='textscan.1osuhhr0h6zz0f14ft0tg12igvzi'>
+            <connection class='textscan' directory='/Users/stefaniabraca/Desktop/final_project/data/results' filename='DBSCANclusters_index_df.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1osuhhr0h6zz0f14ft0tg12igvzi' name='DBSCANclusters_index_df.csv' table='[DBSCANclusters_index_df#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='id_student' ordinal='0' />
+            <column datatype='string' name='age_band' ordinal='1' />
+            <column datatype='string' name='gender' ordinal='2' />
+            <column datatype='string' name='highest_education' ordinal='3' />
+            <column datatype='integer' name='n_assignments' ordinal='4' />
+            <column datatype='real' name='mean_score' ordinal='5' />
+            <column datatype='integer' name='final_result' ordinal='6' />
+            <column datatype='integer' name='total_clicks' ordinal='7' />
+            <column datatype='integer' name='studied_credits' ordinal='8' />
+            <column datatype='string' name='region' ordinal='9' />
+            <column datatype='string' name='code_module' ordinal='10' />
+            <column datatype='real' name='clicks_per_asmt' ordinal='11' />
+            <column datatype='integer' name='cluster_result' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_student</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id_student]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>id_student</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age_band</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[age_band]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>age_band</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>highest_education</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[highest_education]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>highest_education</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>n_assignments</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[n_assignments]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>n_assignments</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mean_score</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[mean_score]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>mean_score</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>final_result</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[final_result]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>final_result</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_clicks</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_clicks]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>total_clicks</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>studied_credits</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[studied_credits]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>studied_credits</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>code_module</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[code_module]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>code_module</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>clicks_per_asmt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[clicks_per_asmt]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>clicks_per_asmt</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cluster_result</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cluster_result]</local-name>
+            <parent-name>[DBSCANclusters_index_df.csv]</parent-name>
+            <remote-alias>cluster_result</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='real' default-format='p0.00%' name='[Calculation1]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([id_student]) / TOTAL(SUM([id_student]))'>
+          <table-calc ordering-type='Field'>
+            <order field='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:age_band:nk]' />
+            <order field='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:gender:nk]' />
+          </table-calc>
+        </calculation>
+      </column>
+      <column datatype='real' name='[Calculation2]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RUNNING_SUM(AVG([total_clicks]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column aggregation='CountD' caption='Age Band' datatype='string' name='[age_band]' role='dimension' type='nominal' />
+      <column caption='Clicks Per Asmt' datatype='real' name='[clicks_per_asmt]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Cluster Result' datatype='integer' name='[cluster_result]' role='dimension' type='ordinal' />
+      <column caption='Code Module' datatype='string' name='[code_module]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='Final Result' datatype='integer' name='[final_result]' role='dimension' type='ordinal'>
+        <aliases>
+          <alias key='1' value='Withdrawn' />
+          <alias key='2' value='Fail' />
+          <alias key='3' value='Pass' />
+          <alias key='4' value='With Distinction' />
+        </aliases>
+      </column>
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Highest Education' datatype='string' name='[highest_education]' role='dimension' type='nominal' />
+      <column caption='Id Student' datatype='integer' name='[id_student]' role='measure' type='quantitative' />
+      <column caption='Mean Score' datatype='real' name='[mean_score]' role='measure' type='quantitative' />
+      <column caption='N Assignments' datatype='integer' name='[n_assignments]' role='measure' type='quantitative' />
+      <column aggregation='None' caption='Region' datatype='string' name='[region]' role='dimension' semantic-role='[NUTS].[Name]' type='nominal' />
+      <column caption='Studied Credits' datatype='integer' name='[studied_credits]' role='measure' type='quantitative' />
+      <column caption='Total Clicks' datatype='integer' name='[total_clicks]' role='measure' type='quantitative' />
+      <column-instance column='[final_result]' derivation='Avg' name='[avg:final_result:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[mean_score]' derivation='Avg' name='[avg:mean_score:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[n_assignments]' derivation='Avg' name='[avg:n_assignments:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_clicks]' derivation='Avg' name='[avg:total_clicks:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[id_student]' derivation='Count' name='[cnt:id_student:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_clicks]' derivation='Avg' name='[cum:avg:total_clicks:qk]' pivot='key' type='quantitative'>
+        <table-calc aggregation='Sum' ordering-type='Rows' type='CumTotal' />
+      </column-instance>
+      <column-instance column='[age_band]' derivation='None' name='[none:age_band:nk]' pivot='key' type='nominal' />
+      <column-instance column='[final_result]' derivation='None' name='[none:final_result:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[gender]' derivation='None' name='[none:gender:nk]' pivot='key' type='nominal' />
+      <column-instance column='[total_clicks]' derivation='Avg' name='[pcto:avg:total_clicks:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[id_student]' derivation='Count' name='[pcto:cnt:id_student:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[id_student]' derivation='Sum' name='[pcto:sum:id_student:qk:2]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Field' type='PctTotal'>
+          <order field='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:age_band:nk]' />
+          <order field='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:gender:nk]' />
+        </table-calc>
+      </column-instance>
+      <column-instance column='[id_student]' derivation='Sum' name='[pcto:sum:id_student:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' type='PctTotal' />
+      </column-instance>
+      <column-instance column='[id_student]' derivation='Sum' name='[sum:id_student:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[mean_score]' derivation='Sum' name='[sum:mean_score:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[total_clicks]' derivation='Sum' name='[sum:total_clicks:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation1]' derivation='User' name='[usr:Calculation1:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Field'>
+          <order field='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:age_band:nk]' />
+          <order field='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:gender:nk]' />
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Calculation2]' derivation='User' name='[usr:Calculation2:qk]' pivot='key' type='quantitative'>
+        <table-calc ordering-type='Rows' />
+      </column-instance>
+      <layout dim-ordering='alphabetic' dim-percentage='0.413943' measure-ordering='alphabetic' measure-percentage='0.586057' show-aliased-fields='true' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:final_result:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[pcto:sum:id_student:qk:2]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[usr:Calculation1:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[cnt:id_student:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:final_result:ok]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[pcto:cnt:id_student:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[pcto:sum:id_student:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[sum:id_student:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:total_clicks:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[cum:avg:total_clicks:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[pcto:avg:total_clicks:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[sum:total_clicks:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[usr:Calculation2:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:n_assignments:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:mean_score:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[sum:mean_score:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Avg. Clicks'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Who is Within Each Cluster?</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DBSCANclusters_index_df' name='federated.15bw1ol0w8m3rg1c0kdtv1llzqdp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15bw1ol0w8m3rg1c0kdtv1llzqdp'>
+            <column-instance column='[total_clicks]' derivation='Avg' name='[avg:total_clicks:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Cluster Result' datatype='integer' name='[cluster_result]' role='dimension' type='ordinal' />
+            <column-instance column='[id_student]' derivation='Count' name='[cnt:id_student:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Final Result' datatype='integer' name='[final_result]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='1' value='Withdrawn' />
+                <alias key='2' value='Fail' />
+                <alias key='3' value='Pass' />
+                <alias key='4' value='With Distinction' />
+              </aliases>
+            </column>
+            <column caption='Id Student' datatype='integer' name='[id_student]' role='measure' type='quantitative' />
+            <column-instance column='[cluster_result]' derivation='None' name='[none:cluster_result:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[final_result]' derivation='None' name='[none:final_result:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[id_student]' derivation='Count' name='[pcto:cnt:id_student:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Total Clicks' datatype='integer' name='[total_clicks]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:cluster_result:ok]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[cnt:id_student:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:final_result:ok]' />
+              <text column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:total_clicks:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[pcto:cnt:id_student:qk]</rows>
+        <cols>[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:cluster_result:ok]</cols>
+      </table>
+      <simple-id uuid='{756467F1-7A19-4959-B5F9-B6E5A78E4570}' />
+    </worksheet>
+    <worksheet name='Avg. Grade'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>How much are they working?&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DBSCANclusters_index_df' name='federated.15bw1ol0w8m3rg1c0kdtv1llzqdp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15bw1ol0w8m3rg1c0kdtv1llzqdp'>
+            <column-instance column='[mean_score]' derivation='Avg' name='[avg:mean_score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_clicks]' derivation='Avg' name='[avg:total_clicks:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Cluster Result' datatype='integer' name='[cluster_result]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Final Result' datatype='integer' name='[final_result]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='1' value='Withdrawn' />
+                <alias key='2' value='Fail' />
+                <alias key='3' value='Pass' />
+                <alias key='4' value='With Distinction' />
+              </aliases>
+            </column>
+            <column caption='Mean Score' datatype='real' name='[mean_score]' role='measure' type='quantitative' />
+            <column-instance column='[cluster_result]' derivation='None' name='[none:cluster_result:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[final_result]' derivation='None' name='[none:final_result:ok]' pivot='key' type='ordinal' />
+            <column caption='Total Clicks' datatype='integer' name='[total_clicks]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:cluster_result:ok]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:total_clicks:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:final_result:ok]' />
+              <text column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:mean_score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:total_clicks:qk]</rows>
+        <cols>[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:cluster_result:ok]</cols>
+      </table>
+      <simple-id uuid='{24B16B86-57CB-4603-AA1D-7B5284F1EC93}' />
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DBSCANclusters_index_df (2)' name='federated.00zkt0719p115g124zmoi1hf5c38' />
+          </datasources>
+          <datasource-dependencies datasource='federated.00zkt0719p115g124zmoi1hf5c38'>
+            <column aggregation='Sum' datatype='integer' name='[cluster_result]' role='dimension' type='ordinal' />
+            <column aggregation='Sum' caption='Final Result' datatype='integer' name='[final_result]' role='dimension' type='ordinal' />
+            <column caption='Id Student' datatype='integer' name='[id_student]' role='measure' type='quantitative' />
+            <column-instance column='[cluster_result]' derivation='None' name='[none:cluster_result:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[final_result]' derivation='None' name='[none:final_result:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[id_student]' derivation='Sum' name='[sum:id_student:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.00zkt0719p115g124zmoi1hf5c38].[none:final_result:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.00zkt0719p115g124zmoi1hf5c38].[sum:id_student:qk]</rows>
+        <cols>[federated.00zkt0719p115g124zmoi1hf5c38].[none:cluster_result:ok]</cols>
+      </table>
+      <simple-id uuid='{5A141660-8415-48F1-98D6-1EF450461C56}' />
+    </worksheet>
+    <worksheet name='Table'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Clusters Overview&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DBSCANclusters_index_df' name='federated.15bw1ol0w8m3rg1c0kdtv1llzqdp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.15bw1ol0w8m3rg1c0kdtv1llzqdp'>
+            <column-instance column='[clicks_per_asmt]' derivation='Avg' name='[avg:clicks_per_asmt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[final_result]' derivation='Avg' name='[avg:final_result:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mean_score]' derivation='Avg' name='[avg:mean_score:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[n_assignments]' derivation='Avg' name='[avg:n_assignments:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_clicks]' derivation='Avg' name='[avg:total_clicks:qk]' pivot='key' type='quantitative' />
+            <column caption='Clicks Per Asmt' datatype='real' name='[clicks_per_asmt]' role='measure' type='quantitative' />
+            <column aggregation='Sum' caption='Cluster Result' datatype='integer' name='[cluster_result]' role='dimension' type='ordinal' />
+            <column-instance column='[id_student]' derivation='Count' name='[cnt:id_student:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='Final Result' datatype='integer' name='[final_result]' role='dimension' type='ordinal'>
+              <aliases>
+                <alias key='1' value='Withdrawn' />
+                <alias key='2' value='Fail' />
+                <alias key='3' value='Pass' />
+                <alias key='4' value='With Distinction' />
+              </aliases>
+            </column>
+            <column caption='Id Student' datatype='integer' name='[id_student]' role='measure' type='quantitative' />
+            <column caption='Mean Score' datatype='real' name='[mean_score]' role='measure' type='quantitative' />
+            <column caption='N Assignments' datatype='integer' name='[n_assignments]' role='measure' type='quantitative' />
+            <column-instance column='[cluster_result]' derivation='None' name='[none:cluster_result:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[clicks_per_asmt]' derivation='Sum' name='[sum:clicks_per_asmt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[mean_score]' derivation='Sum' name='[sum:mean_score:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Clicks' datatype='integer' name='[total_clicks]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[cnt:id_student:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:final_result:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:mean_score:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:n_assignments:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:total_clicks:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:clicks_per_asmt:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[cnt:id_student:qk]&quot;</bucket>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:final_result:qk]&quot;</bucket>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:mean_score:qk]&quot;</bucket>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:n_assignments:qk]&quot;</bucket>
+              <bucket>&quot;[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[avg:total_clicks:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' field='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:cluster_result:ok]' value='44' />
+            <format attr='width' field='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[:Measure Names]' value='94' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[cnt:id_student:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[Multiple Values]' />
+              <lod column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[sum:clicks_per_asmt:qk]' />
+              <lod column='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[sum:mean_score:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='2.5082871913909912' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:cluster_result:ok]</rows>
+        <cols>[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{34BD4F54-7907-41A6-9A4E-12288BB24BC2}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Story 1' type='storyboard'>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type='title' w='98426' x='787' y='830' />
+            <zone h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='84440' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98426' x='787' y='14730'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point captured-sheet='' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{12856ACF-2E6A-4FD2-B59C-C90179A638DC}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' maximized='true' name='Table'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{612E260C-9BF3-4F87-B706-D217A2C504F9}' />
+    </window>
+    <window class='worksheet' name='Avg. Clicks'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:final_result:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BE962403-F53D-44AC-903E-32A727A00B5A}' />
+    </window>
+    <window class='worksheet' name='Avg. Grade'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.15bw1ol0w8m3rg1c0kdtv1llzqdp].[none:final_result:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{85B77A13-9B07-4FEA-9525-EF9CFFC23D2B}' />
+    </window>
+    <window class='dashboard' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{D5525A3B-4588-4FDF-A14A-CA3CA9C877BD}' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.00zkt0719p115g124zmoi1hf5c38].[none:final_result:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1542E0FA-9FCD-4B9B-B4F3-C1C8AD091DF7}' />
+    </window>
+  </windows>
+</workbook>
